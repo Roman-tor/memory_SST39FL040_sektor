@@ -9,7 +9,8 @@ Można w ten sposób zapisać 128 programów! Oczywiście, jeśli programy są k
 
 MENU programu pojawia się na wyświetlaczu LCD 4x20, mamy do wyboru 5. pozycji:
 
-					 FOTO
+					<img width="1262" height="596" alt="programator_FL" src="https://github.com/user-attachments/assets/9029ecf5-9ed4-4728-b3de-b9bbaa5c9360" />
+
 
 0 – kasowanie całej pamięci lub sektora 4 KB 1 – pierwszy wolny numer programu 2 – przegląd pamięci, podobnie jak zlec. *D w CA80 jednakże bez możliwości zapisu 3 – zapis do FLASH: albo programu [CA-od] [.] [CA_do] [nr_programu] [=] lub zapis obszaru z CA do FLASH [CA-od] [.] [CA_do] [=] 4 – szukanie programu-wyświetla się nr programu i jego nazwa, jeśli była wpisana; 5 – przepisanie obszaru z FLASH do CA
 
