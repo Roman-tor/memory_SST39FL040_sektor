@@ -9,6 +9,9 @@ Można w ten sposób zapisać 128 programów! Oczywiście, jeśli programy są k
 
 MENU programu pojawia się na wyświetlaczu LCD 4x20, mamy do wyboru 5. pozycji:
 
+<img width="1262" height="596" alt="programator_FL" src="https://github.com/user-attachments/assets/964de00c-3fbc-4880-bfd3-85f0e26dc805" />
+
+
 					<img width="1262" height="596" alt="programator_FL" src="https://github.com/user-attachments/assets/9029ecf5-9ed4-4728-b3de-b9bbaa5c9360" />
 
 
