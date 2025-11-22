@@ -12,7 +12,7 @@ Format zapisywanych plików:
  3166FF itd.;  to nasz program;  programie powinniśmy umieścić nazwę poprzedzoną znacznikiem   
              DDE2, np. DDE2 „MOJ PROGRAM”, szczegóły w pliku *.ASM 
 
-Można w ten sposób zapisać 128 programów! Oczywiście, jeśli programy są krótsze niż FFFh, mamy przestrzeń niezapisaną ale do tego sposobu zapisu jest inny program, będzie też zamieszczony w moim repozytorium. W tym przypadku, programy są zapisywane „jeden za drugim”.
+Można w ten sposób zapisać 128 programów! Oczywiście, jeśli programy są krótsze niż FFFh, mamy przestrzeń niezapisaną ale do tego sposobu zapisu jest inny program, jest też zamieszczony w moim repozytorium <memory_SST39FL_obszar>. W tym przypadku, programy są zapisywane „jeden za drugim”.
 
 MENU programu pojawia się na wyświetlaczu LCD 4x20, mamy do wyboru 5. pozycji:
  						
@@ -55,6 +55,7 @@ ZLEC *5 – przepisanie obszaru pamięci z FLASH do CA80. Przyjąłem obszar do 
                  w zakresie 8000 – DFFF, 24 KB. Od E000 jest ten pogam do FLASH i 
                  aby bajty nie uległy nadpisaniu, ograniczyłem ten obszar do DFFF. Można to zmienić w  
                  deklaracji „max_zap”  pliku ASM.
+
 
 
 
