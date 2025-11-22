@@ -5,14 +5,14 @@ W mojej wersji, płytka PCB jest znacznie mniejsza (ok. 50x90 mm), brak dodatkow
 Format zapisywanych plików: FDE4 – początek programu 00 - numer programu 00C0 - dwa następne bajty to początek programu w CA80 – np. C000, FFC0 - następne dwa to koniec programu w CA80 - C0FF 3166FF itd.; to nasz program; programie powinniśmy umieścić nazwę poprzedzoną znacznikiem
 DDE2, np. DDE2 „MOJ PROGRAM”, szczegóły w pliku *.ASM
 
-Można w ten sposób zapisać 128 programów! Oczywiście, jeśli programy są krótsze niż FFFh, mamy przestrzeń niezapisaną ale do tego sposobu zapisu jest inny program, będzie też zamieszczony w moim repozytorium. W tym przypadku, programy są zapisywane „jeden za drugim”.
+Można w ten sposób zapisać 128 programów! Oczywiście, jeśli programy są krótsze niż FFFh, mamy przestrzeń niezapisaną ale do tego sposobu zapisu jest inny program, jest też zamieszczony w moim repozytorium <memory_SST39FL_obszar>. W tym przypadku, programy są zapisywane „jeden za drugim”.
 
 MENU programu pojawia się na wyświetlaczu LCD 4x20, mamy do wyboru 5. pozycji:
 
 <img width="1262" height="596" alt="programator_FL" src="https://github.com/user-attachments/assets/964de00c-3fbc-4880-bfd3-85f0e26dc805" />
 
 
-					<img width="1262" height="596" alt="programator_FL" src="https://github.com/user-attachments/assets/9029ecf5-9ed4-4728-b3de-b9bbaa5c9360" />
+				
 
 
 0 – kasowanie całej pamięci lub sektora 4 KB 1 – pierwszy wolny numer programu 2 – przegląd pamięci, podobnie jak zlec. *D w CA80 jednakże bez możliwości zapisu 3 – zapis do FLASH: albo programu [CA-od] [.] [CA_do] [nr_programu] [=] lub zapis obszaru z CA do FLASH [CA-od] [.] [CA_do] [=] 4 – szukanie programu-wyświetla się nr programu i jego nazwa, jeśli była wpisana; 5 – przepisanie obszaru z FLASH do CA
