@@ -1,7 +1,7 @@
 Program „programator_sekt_SST39” to zmodyfikowana wersja programatora pamięci FLASH SST39SF 040 – 512 KB, wg Kol. #Zegar, opisanego na <microgeek.eu> <CA80-system plików>
 https://microgeek.eu/viewtopic.php?f=82&t=2435
 
- W mojej wersji, płytka PCB jest znacznie mniejsza (ok. 50x90 mm), brak dodatkowych układów scalonych (oczywiście oprócz samej pamięci), podłączana jest podobnie jak ta powyżej ale sterowanie jest inne: adresy A0-A13 z linii adresowej CA80 a A14-A18 z portu PB0-PB4 układu 8255 (port użytkownika), linia danych, sygnały CE, WR. RD „pobierane” są z podstawki U10 (tam gdzie RAM od 4000h). Dzięki temu zabiegowi, nie potrzebujemy dodatkowych chipów do wybierania adresów w całym zakresie 512 KB. Mam wyprowadzony kabel płaski, taki jak od dawnych dysków HDD, 34-pinowy, dolutowany do płytki PCB MIK290 /U10/. Dodatkowo, wyjście CE_ U10 /pin 10 U4-74138/ jest rozdzielone - przecięta ścieżka i dołożona zworka 3-piny/. Sygnał idzie na zewnątrz - do FLASH albo do U10. Dzięki temu, nie musimy wyciągać pamięci RAM jeśli tam jest włożona.
+ W mojej wersji, płytka PCB jest znacznie mniejsza (ok. 50x90 mm), brak dodatkowych układów scalonych (oczywiście oprócz samej pamięci), podłączana jest podobnie jak ta powyżej ale sterowanie jest inne: adresy A0-A13 z linii adresowej CA80 a A14-A18 z portu PB0-PB4 układu 8255 (port użytkownika), linia danych, sygnały CE, WR. RD „pobierane” są z podstawki U10 (tam gdzie RAM od 4000h). Dzięki temu zabiegowi, nie potrzebujemy dodatkowych chipów do wybierania adresów w całym zakresie 512 KB. Mam wyprowadzony kabel płaski IDC 34, taki jak do dawnych dyskietek mi ekkich, dolutowany do płytki PCB MIK290 /U10/. Dodatkowo, wyjście CE_ U10 /pin 10 U4-74138/ jest rozdzielone - przecięta ścieżka i dołożona zworka 3-piny/. Sygnał idzie na zewnątrz - do FLASH albo do U10. Po przestawieniu zworki na OUT, nie musimy wyciągać pamięci RAM podczas programowania FLASH, jeśli w podstawce  U 10 jest włożona pamięć RAM.
 Każdy program jest zapisywany w sektorze /sektor liczy 4 KB, 0-FFF/, jeśli jest dłuższy to w większej ilości sektorów, np. MONITOR CA80, wersja 8 KB zajmuje dwa sektory.
  
 Format zapisywanych plików: 
@@ -55,6 +55,7 @@ ZLEC *5 – przepisanie obszaru pamięci z FLASH do CA80. Przyjąłem obszar do 
                  w zakresie 8000 – DFFF, 24 KB. Od E000 jest ten pogam do FLASH i 
                  aby bajty nie uległy nadpisaniu, ograniczyłem ten obszar do DFFF. Można to zmienić w  
                  deklaracji „max_zap”  pliku ASM.
+
 
 
 
